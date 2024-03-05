@@ -55,7 +55,7 @@ function Crud() {
                 setError(false);
                 fetchData();
             }
-        } catch {
+        } catch (error) {
             throw new Error(error);
         }
     }
@@ -67,7 +67,7 @@ function Crud() {
             if (response === 204) {
                 fetchData();
             }
-        } catch {
+        } catch (error) {
             throw new Error(error);
         }
     }
@@ -75,7 +75,7 @@ function Crud() {
     const onRefresh = () => {
         try {
             fetchData();
-        } catch {
+        } catch (error) {
             throw new Error(error);
         }
     }
